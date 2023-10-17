@@ -5,30 +5,15 @@
     <div class="container">
       <div class="row">
 
-        <div class="d-flex justify-content-center col-xl-4 col-lg-4 col-md-12 col-sm-12  p-4">
-          <div class="editcard card text-center">
-            <img src="assets/22222222.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">13 Reasons Why</h5>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="d-flex justify-content-center col-xl-4 col-lg-4 col-md-12 col-sm-12 p-4">
+       
+          <div class="d-flex justify-content-center col-xl-4 col-lg-4 col-md-12 col-sm-12 p-4" *ngFor="let card of arrayInfoCards">
             <div class="editcard card text-center">
-              <img src="assets/dea.jpg" class="card-img-top" alt="...">
+              <img src="{{card.urlImg}}" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title fw-bold">The Walking Dead</h5>
-  
-              </div>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center col-xl-4 col-lg-4 col-md-12 col-sm-12 p-4">
-            <div class="editcard card text-center">
-              <img src="assets/eew.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Buscando a Nemo</h5>
+                <h5 class="card-title fw-bold" *ngIf="card.name !=='Buscando a Nemo'">  {{card.name}} </h5>
+                <p>   {{card.descripcion}} </p>
+                <p>{{card.categoria}}</p>
+                <p class="text-secondary">El Puntaje Es: {{card.rating}}</p>
   
               </div>
             </div>
