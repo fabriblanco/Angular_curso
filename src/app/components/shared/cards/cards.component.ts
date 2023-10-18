@@ -85,5 +85,13 @@ export class CardsComponent {
       urlImg: '../../../../assets/anabe.jpg'
     }
     
-  ]
+    
+
+  ];
+  filter: string = 'Todos'; // Inicialmente, mostrar todos los elementos
+
+  setFilter(filter: string) {
+    this.filter = filter;
+    
+  }
 }

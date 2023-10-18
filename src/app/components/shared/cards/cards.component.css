@@ -1,0 +1,22 @@
+.editcard  {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.9;
+    cursor: pointer;
+    box-shadow: 0px 2px 10px rgba(209, 199, 199, 0.2); /* para ponerle sombra*/
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    background-color: transparent;
+  }
+
+  .editcard:hover{
+    box-shadow: 5px 5px 20px rgba(202, 197, 197, 0.4);
+    transform: translateY(-4%); /* se mueva de manera vertical al pasar el click */
+  }
+
+  .active {
+    background-color: darkred; /* Cambia el color */
+    color: white; /* Cambia el color del texto si es necesario */
+    font-weight: bold; 
+  }
