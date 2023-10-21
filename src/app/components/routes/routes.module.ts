@@ -4,18 +4,18 @@ import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { SeriesComponent } from './series/series.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
+import { LayoutModule } from '../layout/layout.module';
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
     MoviesComponent,
     SeriesComponent,
-    IngresarComponent
+    IngresarComponent,
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+  ],
 })
 export class RoutesModule { }
