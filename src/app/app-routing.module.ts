@@ -4,8 +4,15 @@ import { HomeComponent } from './components/routes/home/home.component';
 import { MoviesComponent } from './components/routes/movies/movies.component';
 import { SeriesComponent } from './components/routes/series/series.component';
 import { IngresarComponent } from './components/routes/ingresar/ingresar.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; // Importa el componente de error 404
+
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch:'full'
+  },
   {
     path: 'home',
     component: HomeComponent
@@ -18,7 +25,8 @@ const routes: Routes = [
   },{
     path:'Ingresar',
     component:IngresarComponent
-  }
+  },// Ruta de error 404 (debe estar al final)
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

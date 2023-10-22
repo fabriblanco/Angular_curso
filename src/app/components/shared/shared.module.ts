@@ -11,7 +11,7 @@ import { CardsComponent } from './cards/cards.component';
   imports: [
     CommonModule,
   ], exports: [
-    CardsComponent
+    CardsComponent,
   ]
 })
 export class SharedModule { }

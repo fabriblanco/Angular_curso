@@ -11,11 +11,14 @@ import { CardsComponent } from './components/shared/cards/cards.component';
 import { SharedModule } from './components/shared/shared.module';
 import { HomeComponent } from './components/routes/home/home.component';
 import { RoutesModule } from './components/routes/routes.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { RoutesModule } from './components/routes/routes.module';
     LayoutModule,
     RouterModule,
     SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
