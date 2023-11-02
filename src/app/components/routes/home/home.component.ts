@@ -12,7 +12,7 @@ export class HomeComponent {
     
   }
 
-   getTrendingAll (): void {
+   getTrendingAll(): void {
     this.moviesServices.getTrending().subscribe({
       next: (Response) => {
         console.log(Response);

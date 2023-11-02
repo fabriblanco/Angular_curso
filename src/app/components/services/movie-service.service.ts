@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class MovieServiceService {
 
-  key: string = "490b04c8f538410e73954c6a4573f116"
+  private apiKey = '490b04c8f538410e73954c6a4573f116';
 
-  apiUrl: string = 'https://api.themoviedb.org/3/'
+  private apiUrl = 'https://api.themoviedb.org/3/';
 
 
 
@@ -24,4 +25,15 @@ export class MovieServiceService {
       }
     })
   }
+
+  getMovies() {
+    const url = `${this.apiUrl}/movie/popular?api_key=${this.apiKey}`;
+    return this._https.get(url);
+  }
+  
+  getSeries() {
+    const url = `${this.apiUrl}/tv/popular?api_key=${this.apiKey}`;
+    return this._https.get(url);
+  }
+  
 }
