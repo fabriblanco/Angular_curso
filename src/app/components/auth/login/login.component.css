@@ -1,0 +1,13 @@
+.colorReg {
+    color: #2D9CDB;
+}
+.colorBtn{
+    background-color: #7B6EF6;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.h-custom-screen{
+    height: 90vh;
+}

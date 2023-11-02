@@ -13,11 +13,13 @@ import { HomeComponent } from './components/routes/home/home.component';
 import { RoutesModule } from './components/routes/routes.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http'
+import { LoginComponent } from './components/auth/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    LoginComponent,
     PageNotFoundComponent
   ],
   imports: [
