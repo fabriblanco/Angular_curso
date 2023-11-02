@@ -5,6 +5,7 @@ import { MoviesComponent } from './components/routes/movies/movies.component';
 import { SeriesComponent } from './components/routes/series/series.component';
 import { IngresarComponent } from './components/routes/ingresar/ingresar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; // Importa el componente de error 404
+import { LoginComponent } from './components/auth/login/login.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,10 @@ const routes: Routes = [
   },{
     path:'Ingresar',
     component:IngresarComponent
-  },// Ruta de error 404 (debe estar al final)
+  },{
+      path: 'login',
+      component: LoginComponent
+  },  // Ruta de error 404 (debe estar al final)
   { path: '**', component: PageNotFoundComponent }
 ];
 
