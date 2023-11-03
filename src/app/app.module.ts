@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from './components/layout/layout.module';
 import { RouterModule } from '@angular/router';
 import { CardsComponent } from './components/shared/cards/cards.component';
@@ -14,6 +14,7 @@ import { RoutesModule } from './components/routes/routes.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http'
 import { LoginComponent } from './components/auth/login/login.component';
+import { AuthModule } from './components/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,9 @@ import { LoginComponent } from './components/auth/login/login.component';
     LayoutModule,
     RouterModule,
     SharedModule,
+    AuthModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
