@@ -32,10 +32,9 @@ export class LoginComponent {
     ) {
       alert('coincide');
 
-      // Guarda los datos del usuario en LocalStorage
+      // Guardo los datos del usuario en LocalStorage
       const userData = {
         email: this.loginFormGroup.value.email,
-        // Puedes agregar más datos aquí según tus necesidades
       };
       localStorage.setItem('userData', JSON.stringify(userData));
 

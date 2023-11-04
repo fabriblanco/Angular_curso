@@ -8,14 +8,13 @@ import { MovieServiceService } from '../../services/movie-service.service';
 })
 export class HomeComponent implements OnInit {
 
-  user: any; // Objeto para almacenar los datos del usuario
+  user: any; // creo objeto para almacenar los datos del usuario
 
   ngOnInit() {
-    // Recupera los datos del usuario almacenados en LocalStorage
+    // Recupero los datos del usuario almacenados en LocalStorage
     const userData = localStorage.getItem('userData');
     if (userData) {
       this.user = JSON.parse(userData);
-      // Puedes usar this.user para mostrar los datos del usuario en tu página de inicio
     }}
 
   constructor(private moviesServices: MovieServiceService){
