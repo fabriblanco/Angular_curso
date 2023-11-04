@@ -24,14 +24,25 @@ export class LoginComponent {
     password: ['']
   })
 
-  leerDatos(){
+  leerDatos() {
     console.log(this.loginFormGroup);
-    if(this.loginFormGroup.value.email === this.misDatos.email && this.loginFormGroup.value.password === this.misDatos.password){
-      alert('coincide')
-      this.router.navigate(['/home'])
-    }
-    else{
-      alert('no coincide')
+    if (
+      this.loginFormGroup.value.email === this.misDatos.email &&
+      this.loginFormGroup.value.password === this.misDatos.password
+    ) {
+      alert('coincide');
+
+      // Guarda los datos del usuario en LocalStorage
+      const userData = {
+        email: this.loginFormGroup.value.email,
+        // Puedes agregar más datos aquí según tus necesidades
+      };
+      localStorage.setItem('userData', JSON.stringify(userData));
+
+      // Redirige al usuario a la página de inicio
+      this.router.navigate(['/home']);
+    } else {
+      alert('no coincide');
     }
   }
 }

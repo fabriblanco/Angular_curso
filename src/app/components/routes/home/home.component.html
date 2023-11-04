@@ -1,10 +1,20 @@
 <div class="bg-dark tipoletra  mx-auto text-center pt-5 text-white text-uppercase m-0">
+      
     <h1 class="p-10 fs-1  border-8 fw-semibold m-0" > Bienvenidos a 
      <span class="text-danger"> PELIS UP! </span>
       </h1>
       <p class="p-3 fs-4">  Plataforma para ver 
        <span class="text-danger"> peliculas y series </span> 
        </p>
+       <div class="col">
+        <h4>Tus Datos</h4>
+        <div *ngIf="user">
+          <p>Correo Electrónico: {{ user.email }}</p>
+        </div>
+        <div *ngIf="!user">
+          <p>Por favor, inicia sesión para ver tus datos.</p>
+        </div>
+      </div>
        <button type="button" class="btn btn-outline-warning" (click)="getTrendingAll()">Traer trending </button>
 
 </div>
