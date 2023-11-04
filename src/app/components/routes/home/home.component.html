@@ -6,10 +6,10 @@
       <p class="p-3 fs-4">  Plataforma para ver 
        <span class="text-danger"> peliculas y series </span> 
        </p>
-       <div class="col">
+       <div class=" text-secondary col">
         <h4>Tus Datos</h4>
         <div *ngIf="user">
-          <p>Correo Electrónico: {{ user.email }}</p>
+          <p>Correo Electrónico: <span class=" text-danger"> {{ user.email }} </span></p>
         </div>
         <div *ngIf="!user">
           <p>Por favor, inicia sesión para ver tus datos.</p>
